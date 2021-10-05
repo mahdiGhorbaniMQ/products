@@ -1,0 +1,61 @@
+<div>  
+    <form [formGroup]="form" (ngSubmit)="create()">  
+        <table border="1" style="width:60%;" cellpadding="5" cellspacing="5">  
+            <tr>  
+                <td style="width :40%;">  
+                    <label for="title">title</label>  
+                </td>  
+                <td style="width :60%;">  
+                    <input type="text" name="title" id="title" [formControl]="title">  
+                    <div [hidden]="title.valid || title.untouched" class="error">  
+                        <div [hidden]="!title.hasError('minlength')">  
+                            Title can not be shorter than 4 characters.  
+                        </div>  
+                        <div [hidden]="!title.hasError('required')">  
+                            Title is required.  
+                        </div>  
+                    </div>  
+                </td>  
+            </tr>             
+
+            <tr>  
+                <td style="width :40%;">  
+                    <label for="imgSrc">price</label>  
+                </td>  
+                <td style="width :60%;">  
+                    <input type="number" name="price" id="price" [formControl]="price">  
+                    <div [hidden]="price.valid || price.untouched" class="error">  
+                        <div [hidden]="!price.hasError('required')">  
+                            The price is required.  
+                        </div>  
+                        <div [hidden]="!price.hasError('number')">  
+                            The price is number.  
+                        </div>  
+                        <div [hidden]="!price.hasError('')">  
+                            Your price must have two decimal places!
+                        </div>  
+                    </div>  
+                </td>  
+            </tr>  
+            <tr>  
+                <td style="width :40%;">  
+                    <label for="imgSrc">imgSrc</label>  
+                </td>  
+                <td style="width :60%;">  
+                    <input type="number" name="count" id="count" [formControl]="count">  
+                    <div [hidden]="count.valid || count.untouched" class="error">  
+                        <div [hidden]="!count.hasError('required')">  
+                            The count is required.  
+                        </div>  
+                        <div [hidden]="!count.hasError('')">  
+                            Your count must have tow digits! 
+                        </div>  
+                    </div>  
+                </td>  
+            </tr>   
+            <button type="submit" [disabled]="!form.valid" class="submit">create</button>  
+
+        </table>  
+    </form>  
+
+</div>

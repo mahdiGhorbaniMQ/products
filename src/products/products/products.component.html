@@ -1,0 +1,20 @@
+<div class="container">
+    <div *ngFor="let product of products" class="product">
+        <div class="imgContainer">
+            <img *ngIf="product.imgSrc" [src]="product.imgSrc">
+            <div *ngIf="!product.imgSrc" class="noImg">no image</div>
+        </div>
+        <div class="dataContainer">
+            <p>title: {{product.title}}</p>
+            <p>price: {{product.price}}</p>
+            <p>count: {{product.count}}</p>
+        </div>
+        <div class="buttonContainer">
+            <button (click)="delete(product)">delete</button>
+            <button (click)="update(product)">update</button>
+        </div>
+    </div>
+    <div class="create product" (click)="create()">
+        <p>create</p>
+    </div>
+<div>

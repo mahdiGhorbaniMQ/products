@@ -1,0 +1,41 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.product{
+    text-align: center;
+    background-color: gray;
+    width: 150px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px;
+}
+.dataContainer{
+    margin: 10px;
+    text-align: left;
+}
+.imgContainer{
+    background-color: white;
+    text-align: center;
+    margin: 4px;    
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 140px;
+    height: 100px;;
+}
+.buttonContainer{
+    color: blue;
+    display: flex;
+    justify-content: center;
+}
+.create{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+}
+.create:hover{
+    background-color: darkgrey;
+}
