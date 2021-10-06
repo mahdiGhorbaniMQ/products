@@ -44,6 +44,9 @@ export class ProductsControllerService {
     return this.information.creatingItem;
   }
   generateNewId():number{
-    return this.information.products[this.information.products.length-1].id+1
+    var id=1;
+    if (this.information.products.length>0)
+      id = this.information.products[this.information.products.length-1].id+1;
+    return id;
   }
 }
